@@ -167,10 +167,10 @@ const cardTheme = {
   }
 }
 
-function Dashboard() {
+// fix rendering issue on deployment 
+window.dispatchEvent(new Event('resize'))
 
-  // fix rendering issue on deployment 
-  window.dispatchEvent(new Event('resize'))
+function Dashboard() {
 
   return (
     <>
