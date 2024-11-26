@@ -169,6 +169,9 @@ const cardTheme = {
 
 function Dashboard() {
 
+  // fix rendering issue on deployment 
+  window.dispatchEvent(new Event('resize'))
+
   return (
     <>
       {/* Top Header */}
