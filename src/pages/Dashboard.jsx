@@ -150,6 +150,11 @@ const DonutChart = () => {
     },
   }
 
+  // fix rendering chart issue on deployment using useEffect
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'))
+  })
+
   return (
     <>
       <ReactApexChart
@@ -171,11 +176,6 @@ const cardTheme = {
 
 
 function Dashboard() {
-
-  useEffect(() => {
-    // fix rendering issue on deployment 
-    window.dispatchEvent(new Event('resize'))
-  })
 
   return (
     <>
