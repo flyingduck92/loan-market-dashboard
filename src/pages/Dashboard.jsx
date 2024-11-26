@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Avatar, Card } from "flowbite-react"
 import ReactApexChart from 'react-apexcharts'
 import {
@@ -11,8 +12,8 @@ import {
   HiOutlineShoppingBag,
 } from "react-icons/hi"
 import { HiOutlineBanknotes } from "react-icons/hi2"
-import AvatarImg from '../assets/avatar.png'
 
+import AvatarImg from '../assets/avatar.png'
 import Header from '../components/Header'
 
 const ApprovedLoanChart = () => {
@@ -167,10 +168,14 @@ const cardTheme = {
   }
 }
 
-// fix rendering issue on deployment 
-window.dispatchEvent(new Event('resize'))
+
 
 function Dashboard() {
+
+  useEffect(() => {
+    // fix rendering issue on deployment 
+    window.dispatchEvent(new Event('resize'))
+  })
 
   return (
     <>
