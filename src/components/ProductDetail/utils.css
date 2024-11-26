@@ -1,0 +1,18 @@
+.input-cover {
+  position: relative;
+}
+
+.disabled-form-selection {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  cursor: not-allowed;
+}
+
+:is(input:disabled, textarea:disabled)+.disabled-form-selection {
+  display: block;
+}
